@@ -1,0 +1,44 @@
+### Financial Analysis Chatbot - Documentation
+
+#### **Overview:**
+The Financial Analysis Chatbot allows users to ask about financial data of specific companies over different years. It can provide information on **total revenue**, **net income**, **total assets**, and **average assets** for companies like Apple, Microsoft, and Tesla.
+
+The chatbot leverages **regular expressions (regex)** to handle various user queries flexibly, accommodating different formats for company names and years. It also features basic typo correction to improve accuracy in responding to user inputs.
+
+#### **Predefined Queries:**
+The chatbot can respond to the following types of queries:
+- **Total Revenue:** 
+  - "What is the total revenue of Apple in 21?"
+  - "What is the revenue of Microsoft in 2021?"
+  - "What was Tesla's total revenue in 23?"
+  
+- **Net Income:** 
+  - "How much was the net income of Microsoft in 22?"
+  - "What was Apple's net income in 2022?"
+
+- **Total Assets:**
+  - "What are the total assets of Tesla in 21?"
+  - "Tell me the total assets of Microsoft in 2022."
+  
+- **Average Assets:** 
+  - "What is the average assets of Apple?"
+  - "How much are Tesla's average assets?"
+
+#### **Features:**
+- **Case-insensitive:** The chatbot accepts company names and years in any case (e.g., "apple", "APPLE", "Apple").
+- **Year Variations:** It can recognize year abbreviations (e.g., "21" for 2021) as well as full years (e.g., "2021").
+- **Typos Handling:** The chatbot corrects common misspellings like "revenue" as "revnue" and "the" as "teh".
+- **Flexibility in Queries:** Users can phrase their queries differently (e.g., "What is the net income of Apple in 22?" or "What was Apple's income in 2022?").
+
+#### **Limitations:**
+- **Limited Data:** The chatbot is currently only set up to respond with data for three companies: Apple, Microsoft, and Tesla.
+- **No Dynamic Data Fetching:** The data used is predefined and static. It doesn't fetch live data or update based on external sources.
+- **Error Handling:** The chatbot does not handle queries for companies or years not included in the predefined dataset.
+
+#### **How It Works:**
+1. The chatbot listens for user queries.
+2. It processes the query using regular expressions to detect the company and year mentioned.
+3. It matches the query with the predefined dataset and extracts the relevant financial information (revenue, net income, total assets, or average assets).
+4. The chatbot responds with the corresponding information or an error message if the data is unavailable.
+
+This chatbot is an easy-to-use tool for getting financial insights based on a fixed dataset and is intended for quick look-ups of key financial metrics for a few companies.
